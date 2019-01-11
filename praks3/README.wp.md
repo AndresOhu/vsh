@@ -24,4 +24,4 @@ user=root
 password=qwerty
 
 tegin var/www/public_html kausta faili test.php mis väljastab minnes lehele 172.23.13.40/~it/test.php tekstina "test v2"
-varem sai tehtud ka test.php fail kuhu lisasin <?php phpinfo(); ?> mis väljastab olemasoleva php info
+varem sai tehtud ka fail mille paigutasin /var/www/html kausta test.php kuhu lisasin <?php phpinfo(); ?> mis väljastab olemasoleva php info
