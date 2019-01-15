@@ -19,6 +19,7 @@ Failis muutsin Servername: ja panin sinna 172.23.13.40:443
 Allolevad read täiendasin järgmiselt
 #
 SSLCertificateFile /etc/apache2/ssl/apache.crt
+#
 SSLCertificateKeyFile /etc/apache2/ssl/apache.key
 #
 service apache2 reload
