@@ -1,0 +1,72 @@
+# db serv
+
+db_serverile paigaldasin mariadb-server ning käivitasin mysql installi
+
+apt install mariadb-server
+
+mysql_secure_installation
+
+#
+mysql installis panin password changele no, ülejäänutele yes
+
+
+
+Järgmisena muutsin /etc/mysql/my.cnf failis bind-addressi ära = 10.0.2.6
+
+service mysql restart
+
+mysql -u root -p
+
+#
+
+CREATE DATABASE wordpress;
+CREATE USER 'WPuser'@'localhost' IDENTIFIED BY 'qwerty';
+GRANT ALL PRIVILEGES ON wordpress.* TO 'WPuser'@'localhost';
+CREATE USER 'WPuser'@'10.0.2.5' IDENTIFIED BY 'qwerty'; = veebiserveri ip 
+GRANT ALL PRIVILEGES ON wordpress.* TO 'WPuser'@'10.0.2.5';
+exit
+
+#
+#
+#
+# wordpressi server
+
+apt update; apt install apache2 mariadb-client php-mysql zip
+
+sisestasin sources.listi lehed
+
+deb http://packages.dotdeb.org jessie all
+deb-src http://packages.dotdeb.org jessie all
+
+#
+
+#apt install php7.0-*
+
+#service apache2 reload.
+
+#
+cd /tmp
+wget -c http://wordpress.org/latest.zip
+unzip -q latest.zip -d /var/www/html/
+
+
+määrasin õigused ja lõin kaustad
+
+#
+chown -R www-data.www-data /var/www/html/wordpress
+chmod -R 755 /var/www/html/wordpress
+mkdir -p /var/www/html/wordpress/wp-content/uploads
+chown -R www-data.www-data /var/www/html/wordpress/wp-content/uploads
+##
+cd /var/www/html/wordpress/
+cp wp-config-sample.php wp-config.php
+nano wp-config.php
+#
+
+wp-config.php= muutsin user;password;database name; hostname = 10.0.2.6
+
+wp-config.php lisasin ka githubi
+
+# klient
+
+kliendile läks 2GB RAM ja 10GB kettamahtu
