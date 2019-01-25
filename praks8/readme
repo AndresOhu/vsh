@@ -5,7 +5,7 @@ chown -R www-data /var/www/andres.ee
 chgrp -R www-data /var/www/andres.ee
 Kausta sisse tegin ka index.html faili mis toimis saidina Faili sisu võis olla mida tahad
 
-Peale seda pidi kopeerima apache2 default konfiguratsiooni asukohast: /etc/apache2/sites-available/000-default.conf Asukohta /etc/apache2/sites-available/alan.ee.conf
+Peale seda pidi kopeerima apache2 default konfiguratsiooni asukohast: /etc/apache2/sites-available/000-default.conf Asukohta /etc/apache2/sites-available/andres.ee.conf
 
 Avasin uue tehtud faili ning muutsin järgmised read:
 
