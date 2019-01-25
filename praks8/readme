@@ -1,5 +1,5 @@
 Virtual hosts ehk nime lahendus
-Alustuseks tegin uue kausta nimega alan.ee asukohta /var/www/alan.ee Sinna sisse tegin public_html kausta (pole vajalik) Kaustadele andsin õigused käskudega
+Alustuseks tegin uue kausta nimega andres.ee asukohta /var/www/alan.ee Sinna sisse tegin public_html kausta (pole vajalik) Kaustadele andsin õigused käskudega
 
 chown -R www-data /var/www/andres.ee
 chgrp -R www-data /var/www/andres.ee
